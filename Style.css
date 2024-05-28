@@ -1,0 +1,128 @@
+/* body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.message {
+  font-size: 72px;
+  text-align: center;
+  text-shadow: 1px 1px 4px rgb(0, 255, 145);
+  color: rgb(7, 133, 39);
+} */
+
+:root {
+  --main-color: rgb(7, 133, 39);
+  --contrast-color: rgb(0, 255, 145);
+  --hover-effect: rgb(5, 97, 38);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  font-family: "Arial", sans-serif;
+}
+
+.message,
+.amounts {
+  font-size: 72px;
+  text-align: center;
+  text-shadow: 1px 1px 4px var(--contrast-color);
+  color: var(--main-color);
+  margin-bottom: 20px;
+}
+
+.blink {
+  animation: blink-animation 2s steps(1, start) infinite;
+}
+
+@keyframes blink-animation {
+  50% {
+    opacity: 0;
+  }
+}
+
+.button {
+  font-size: 110px;
+  padding: 10px 20px;
+  margin: 15px;
+  margin-top: 30px;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px var(--contrast-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+}
+
+.button-cb,
+.button-esp {
+  width: 50%;
+  font-size: 60px;
+  padding: 10px 20px;
+  margin: 15px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border: none;
+  border-radius: 10px;
+  color: black;
+  text-shadow: 1px 1px 4px rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px var(--contrast-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.fa-solid {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.fa-regular {
+  font-size: 100px;
+  font-weight: 500;
+}
+
+.button-cb img,
+.button-esp img {
+  width: 100px;
+  border-radius: 10px;
+}
+
+.button:hover,
+.button-cb:hover,
+.button-esp:hover {
+  background-color: var(--hover-effect);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.align-button {
+  text-align: center;
+}
+
+.validate-button {
+  font-size: 80px;
+  padding: 15px 30px;
+  margin-top: 30px;
+}
