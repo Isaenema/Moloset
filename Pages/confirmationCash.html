@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/845b24a10d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../Style.css" />
+    <title>Confirmation Espèces</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <i
+          class="fa-solid fa-arrow-left"
+          aria-hidden="true"
+          style="
+            position: absolute;
+            margin-bottom: 100px;
+            margin-top: -200px;
+            margin-left: -200px;
+          "
+          onclick="goBack()"
+        ></i>
+      </header>
+      <section>
+        <div class="message">
+          Vous avez sélectionné un montant de <span id="selectedAmount"></span>€
+        </div>
+        <div class="message">
+          Moyen de paiement : <span id="paymentMethod"></span>
+        </div>
+        <div class="progress-container">
+          <div id="progressBar" class="progress-bar">0%</div>
+        </div>
+        <div>
+          <input
+            type="number"
+            id="amountInput"
+            class="amount-input"
+            placeholder="Ajoutez €"
+            min="1"
+          />
+          <button onclick="addAmount()">Ajouter</button>
+        </div>
+        <div class="message" id="currentAmountMessage">
+          Montant actuel ajouté : <span id="currentAmount">0</span>€
+        </div>
+      </section>
+    </main>
+    <script src="../main.js"></script>
+    <script src="../cash.js"></script>
+  </body>
+</html>
