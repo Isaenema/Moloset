@@ -129,6 +129,10 @@ body {
   box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.7);
 }
 
+.fa-arrow-left:hover {
+  box-shadow: 0px 15px 25px rgba(2, 61, 24, 0.7);
+}
+
 .align-button {
   text-align: center;
 }
