@@ -28,13 +28,23 @@
         <div class="message">Votre solde actuel est de X€</div>
         <div class="message" id="rechargeMessage"></div>
         <div class="amounts">
-          <button class="button">5€</button>
-          <button class="button">10€</button>
-          <button class="button">20€</button>
-          <button class="button">50€</button>
+          <button class="button" id="amount5" onclick="selectAmount(5)">
+            5€
+          </button>
+          <button class="button" id="amount10" onclick="selectAmount(10)">
+            10€
+          </button>
+          <button class="button" id="amount20" onclick="selectAmount(20)">
+            20€
+          </button>
+          <button class="button" id="amount50" onclick="selectAmount(50)">
+            50€
+          </button>
         </div>
         <div class="align-button">
-          <button class="validate-button">Valider</button>
+          <button class="validate-button" onclick="validateAmount()">
+            Valider
+          </button>
         </div>
       </section>
     </main>
