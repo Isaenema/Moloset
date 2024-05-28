@@ -157,7 +157,7 @@ body {
   transition: all 0.3s ease;
 }
 
-.progress-container {
+/* .progress-container {
   width: 100%;
   background-color: #f3f3f3;
   border-radius: 25px;
@@ -172,6 +172,55 @@ body {
   text-align: center;
   line-height: 30px;
   color: white;
+} */
+
+.progress-container {
+  --progress: 0%;
+
+  width: 600px;
+  height: 50px;
+  margin: 6em auto;
+  border: 1px solid var(--main-color);
+  border-radius: 10px;
+  padding: 12px 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+.progress-bar {
+  width: var(--progress);
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  font-weight: 800;
+  background: linear-gradient(
+    rgb(7, 138, 53),
+    rgb(85, 204, 117),
+    rgb(7, 138, 53)
+  );
+  background-repeat: repeat;
+  box-shadow: 0 0 10px 0px var(--contrast-color);
+  animation: shine 4s ease-in infinite, end 1s ease-out 1;
+  transition: width 3s ease;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+@keyframes end {
+  0%,
+  100% {
+    box-shadow: 0 0 10px 0px rgb(12, 178, 6);
+  }
+  50% {
+    box-shadow: 0 0 15px 5px rgb(12, 178, 6);
+  }
 }
 
 .amount-input {
