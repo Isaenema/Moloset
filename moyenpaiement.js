@@ -1,6 +1,6 @@
 const moyenMessageElement = document.getElementById("messageMoyen");
 const moyenFullMessage = "Choisissez votre moyen de paiement ";
-const moyenTypingDelay = 1500 / moyenFullMessage.length;
+const moyenTypingDelay = 1000 / moyenFullMessage.length;
 
 let letterIndex = 0;
 function moyenTypeLetter() {
