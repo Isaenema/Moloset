@@ -1,5 +1,5 @@
 const rechargeElement = document.getElementById("rechargeMessage");
-const rechargeFullMessage = "Vous pouvez recharger de ";
+const rechargeFullMessage = "Séléctionnez un montant de recharge ";
 const rechargeTypingDelay = 1500 / rechargeFullMessage.length;
 
 let rechargeLetterIndex = 0;
