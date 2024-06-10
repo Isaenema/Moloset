@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,31 +13,49 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/test.css" />
     <title>Confirmation CB</title>
   </head>
   <body>
-    <main>
+    <main class="container">
       <header>
-        <i
-          class="fa-solid fa-arrow-left"
-          aria-hidden="true"
-          style="
-            position: absolute;
-            margin-bottom: 100px;
-            margin-top: -200px;
-            margin-left: -200px;
-          "
-          onclick="goBack()"
-        ></i>
+        <div class="logo-header blue lighten-3">logo Moloset Whatever</div>
       </header>
-      <section>
-        <div class="message">
-          Veuillez suivre les indications du lecteur de carte.
-        </div>
-        <div class="spinnerCB" id="spinnerCB"></div>
-      </section>
+      <div class="main-center">
+        <section>
+          <div class="card-panel z-depth-1 blue lighten-5">
+            <span class="dark-text"
+              >Veuillez suivre les indications du lecteur de carte.</span
+            >
+          </div>
+          <!-- <div class="progress">
+            <div class="indeterminate"></div>
+          </div> -->
+          <div class="spinner-box">
+            <div class="spinnerCB" id="spinnerCB"></div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <button
+          class="btn-back btn-floating waves-effect waves-light"
+          onclick="goBack()"
+        >
+          <i class="material-icons">arrow_back</i>
+          <p>Page précédente</p>
+        </button>
+        <div class="logo-footer blue lighten-3">logo Moloset Whatever</div>
+      </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/CB.js"></script>
   </body>

@@ -30,11 +30,12 @@ function addAmount() {
 function updateProgressBar() {
   const progressBar = document.getElementById("progressBar");
   const currentAmountElement = document.getElementById("currentAmount");
+  const remainingAmount = selectedAmount - currentAmount;
   const percentage = (currentAmount / selectedAmount) * 100;
 
   progressBar.style.width = percentage + "%";
-  progressBar.textContent = Math.round(percentage) + "%";
-  currentAmountElement.textContent = currentAmount;
+  progressBar.textContent = remainingAmount + "€ restant";
+  currentAmountElement.textContent = currentAmount + "";
 
   if (currentAmount >= selectedAmount) {
     showSpinnerAndRedirect();

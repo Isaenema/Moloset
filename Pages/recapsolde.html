@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -12,22 +13,48 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/Style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/test.css" />
     <title>Document</title>
   </head>
   <body>
-    <main>
-      <section>
-        <div class="message">L'opération à bien été prise en compte,</div>
-        <div class="message">
-          Votre nouveau solde est de <span id="newBalance"></span>€ !
-        </div>
-        <div class="countdown">
-          Redirection dans <span id="countdown">10</span> secondes...
-        </div>
-      </section>
+    <main class="container">
+      <header>
+        <div class="logo-header blue lighten-3">logo Moloset Whatever</div>
+      </header>
+      <div class="main-center">
+        <section>
+          <div class="card-panel z-depth-1 green">
+            <span class="dark-text"
+              >L'opération a bien été prise en compte !</span
+            >
+          </div>
+          <div class="card-panel z-depth-1 blue">
+            <span class="dark-text"
+              >Votre nouveau solde est de <span id="newBalance"></span>€ !</span
+            >
+          </div>
+          <div class="card-panel z-depth-1 grey lighten-4">
+            <span class="dark-text">Merci et à bientot !</span>
+            <div class="dark-text redirect">
+              redirection dans <span id="countdown">10</span> secondes
+            </div>
+          </div>
+        </section>
+      </div>
+      <footer>
+        <div class="logo-footer blue lighten-3">logo Moloset Whatever</div>
+      </footer>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/recapsolde.js"></script>
   </body>
-  <script src="../js/main.js"></script>
-  <script src="../js/recapsolde.js"></script>
 </html>

@@ -1,14 +1,17 @@
+let totalAmount = 0;
+
 function goBack() {
   window.history.back();
 }
+
 function selectAmount(amount) {
-  localStorage.setItem("selectedAmount", amount);
+  totalAmount += amount;
+  document.getElementById("totalAmount").textContent = `${totalAmount}€`;
 }
 
 function validateAmount() {
-  const selectedAmount = localStorage.getItem("selectedAmount");
-
-  if (selectedAmount) {
+  if (totalAmount > 0) {
+    localStorage.setItem("selectedAmount", totalAmount);
     window.location.href = "Moyenpaiement.html";
   } else {
     alert("Veuillez sélectionner un montant.");
@@ -24,6 +27,7 @@ function selectPaymentMethod(method) {
     window.location.href = "confirmationCash.html";
   }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
   const selectedAmount = localStorage.getItem("selectedAmount");
   const paymentMethod = localStorage.getItem("paymentMethod");
