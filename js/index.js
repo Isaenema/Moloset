@@ -1,17 +1,7 @@
 const messageElement = document.getElementById("message");
 const fullMessage = "Merci de poser votre carte sur le lecteur NFC";
-const typingDelay = 2000 / fullMessage.length;
 
-let letterIndex = 0;
-function typeLetter() {
-  if (letterIndex < fullMessage.length) {
-    messageElement.textContent += fullMessage.charAt(letterIndex);
-    letterIndex++;
-    setTimeout(typeLetter, typingDelay);
-  } else {
-    addBlinkEffect();
-  }
-}
+messageElement.textContent = fullMessage;
 
 function addBlinkEffect() {
   const period = document.createElement("span");
@@ -22,4 +12,5 @@ function addBlinkEffect() {
     period.classList.toggle("blink");
   }, 800);
 }
-typeLetter();
+
+addBlinkEffect();

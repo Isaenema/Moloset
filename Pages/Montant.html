@@ -28,60 +28,73 @@
     <main class="container">
       <header>
         <div class="logo-header blue lighten-3">logo Moloset Whatever</div>
+        <button
+          id="toggleDarkModeBtn"
+          class="z-depth-4 waves-effect waves-light btn-toggle-dark-mode"
+          onclick="toggleDarkMode()"
+        ></button>
       </header>
       <div class="main-center">
         <section>
           <div class="card-panel z-depth-1 blue lighten-5">
-            <span class="black-text">Votre solde actuel est de {X}€.</span>
+            <span class="text-color">Votre solde actuel est de {X}€.</span>
 
-            <span class="black-text"
+            <span class="text-color"
               >Veuillez séléctionner votre montant de recharge :</span
             >
           </div>
           <div class="row amounts">
             <div class="col s12 m3">
               <button
-                class="btn-large z-depth-4 white-text waves-effect waves-light"
+                class="btn-large z-depth-4 waves-effect waves-light"
                 id="amount5"
                 onclick="selectAmount(5)"
               >
-                5€
+                + 5€
               </button>
             </div>
             <div class="col s12 m3">
               <button
-                class="btn-large z-depth-4 white-text waves-effect waves-light"
+                class="btn-large z-depth-4 waves-effect waves-light"
                 id="amount10"
                 onclick="selectAmount(10)"
               >
-                10€
+                + 10€
               </button>
             </div>
             <div class="col s12 m3">
               <button
-                class="btn-large z-depth-4 white-text waves-effect waves-light"
+                class="btn-large z-depth-4 waves-effect waves-light"
                 id="amount20"
                 onclick="selectAmount(20)"
               >
-                20€
+                + 20€
               </button>
             </div>
             <div class="col s12 m3">
               <button
-                class="btn-large z-depth-4 white-text waves-effect waves-light"
+                class="btn-large z-depth-4 waves-effect waves-light"
                 id="amount50"
                 onclick="selectAmount(50)"
               >
-                50€
+                + 50€
               </button>
             </div>
           </div>
           <div class="align-button">
             <button
-              class="btn-cbcash white-text z-depth-4 btn-validate waves-effect waves-light"
+              class="btn-cbcash z-depth-4 btn-validate waves-effect waves-light"
               onclick="validateAmount()"
             >
               Valider <span id="totalAmount">0€</span>
+            </button>
+          </div>
+          <div class="clean">
+            <button
+              class="btn-clear btn-floating-clear waves-effect waves-light"
+              onclick="clearAmount()"
+            >
+              <p>Effacer</p>
             </button>
           </div>
         </section>
